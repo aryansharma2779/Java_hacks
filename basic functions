@@ -1,0 +1,64 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		List<String> list_String=new ArrayList<String>();
+		list_String.add("Red");
+		list_String.add("Blue");
+		list_String.add("pink");
+		list_String.add("black");
+		list_String.add("wite");
+		for (String element :list_String){
+		    System.out.println(element);
+		}
+		System.out.println();
+		list_String.add(0,"skyblue");
+		System.out.println(list_String);
+		System.out.println("First Element "+list_String.get(0));
+		System.out.println("Fourt element "+list_String.get(4));
+		
+		list_String.set(5,"grey");
+		System.out.println(list_String);
+		
+		list_String.remove(5);
+	    System.out.println(list_String);
+	    //Searcin
+	    if (list_String.contains("Red")){
+	        System.out.println("Found Element");
+	    }else{
+	        System.out.println("Element not FOund");
+	    
+	    }
+	    System.out.println("List before sorted: "+list_String);
+	    Collections.sort(list_String);
+	    System.out.println("List after sort: "+list_String);
+	    
+	    List<String> List1=new ArrayList<String>();
+	    List1.add("1");List1.add("2");
+	    List1.add("3");List1.add("4");
+	    System.out.println("List1: "+List1);
+	    
+	    List<String> List2=new ArrayList<String>();
+	    List2.add("A");List2.add("B");
+	    List2.add("C");List2.add("D");
+	    System.out.println("List1: "+List2);
+	    
+	    Collections.copy(List1,List2);
+	    System.out.println("List1: "+List1);
+	    System.out.println("List 2: "+List2);
+	    
+	    Collections.shuffle(list_String);
+	    System.out.println("List after sufflin "+list_String);
+	    
+	    Collections.reverse(list_String);
+	    System.out.println("Reverse String "+list_String);
+	}
+}
