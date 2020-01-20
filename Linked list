@@ -74,5 +74,20 @@ public class Main
         System.out.println("remove first "+l_list.removeFirst());
         System.out.println("remove last "+l_list.removeLast());
         
+        //remove all element of link list
+        // l_list.clear();
+        // System.out.println(l_list);
+        
+        //swap 2 element in link list
+        Collections.swap(l_list,3,5);
+        System.out.println(l_list);
+        
+        //shuffle elements of link list
+        Collections.shuffle(l_list);
+        System.out.println(l_list);
+        
+        //join 2 link list
+        l_list.addAll(l_list1);
+        System.out.println(l_list);
                 	}
 }
