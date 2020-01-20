@@ -1,0 +1,135 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		List<String> list_String=new ArrayList<String>();
+		list_String.add("Red");
+		list_String.add("Blue");
+		list_String.add("pink");
+		list_String.add("black");
+		list_String.add("wite");
+		for (String element :list_String){
+		    System.out.println(element);
+		}
+		System.out.println();
+		list_String.add(0,"skyblue");
+		System.out.println(list_String);
+		System.out.println("First Element "+list_String.get(0));
+		System.out.println("Fourt element "+list_String.get(4));
+		
+		list_String.set(5,"grey");
+		System.out.println(list_String);
+		
+		list_String.remove(5);
+	    System.out.println(list_String);
+	    //Searcin
+	    if (list_String.contains("Red")){
+	        System.out.println("Found Element");
+	    }else{
+	        System.out.println("Element not FOund");
+	    
+	    }
+	    System.out.println("List before sorted: "+list_String);
+	    Collections.sort(list_String);
+	    System.out.println("List after sort: "+list_String);
+	    
+	    List<String> List1=new ArrayList<String>();
+	    List1.add("1");List1.add("2");
+	    List1.add("3");List1.add("4");
+	    System.out.println("List1: "+List1);
+	    
+	    List<String> List2=new ArrayList<String>();
+	    List2.add("A");List2.add("B");
+	    List2.add("C");List2.add("D");
+	    System.out.println("List1: "+List2);
+	    
+	    Collections.copy(List1,List2);
+	    System.out.println("List1: "+List1);
+	    System.out.println("List 2: "+List2);
+	    
+	    Collections.shuffle(list_String);
+	    System.out.println("List after sufflin "+list_String);
+	    
+	    Collections.reverse(list_String);
+	    System.out.println("Reverse String "+list_String);
+	    
+	    List<String> sub_List=list_String.subList(0,3);
+	    System.out.println(sub_List);
+	    
+	    //comparin 2 arrays
+	    List<String> c1=new ArrayList<String>();
+	    c1.add("Red");c1.add("Green");c1.add("Black");c1.add("White");c1.add("Pink");
+	    
+	    List<String> c2=new ArrayList<String>();
+	    c2.add("Red");c2.add("Green");c2.add("Black");c2.add("Pink");
+	    
+	    List<String> c3=new ArrayList<String>();
+	    for (String e:c1)
+	    c3.add(c2.contains(e)?"Yes":"No");
+	    System.out.println(c3);
+	    
+	    //swappin 2 elements in ArrayList
+	  System.out.println("Array list before swap");
+	  for(String a:c1){
+	      System.out.println(a);
+	      
+	      
+	  }
+	    Collections.swap(c1,0,2);
+	      System.out.println(c1);
+	    
+	    //join 2 Array
+	    ArrayList<String> a=new ArrayList<String>();
+	    a.addAll(c1);
+	    a.addAll(c2);
+	    System.out.println("New array: "+a);
+	    
+	    //cloning an array list to another array list
+	    ArrayList<String> c4=new ArrayList<String>();
+	    c4.add("Red");c4.add("Green");c4.add("Black");c4.add("White");c4.add("Pink");
+	    System.out.println("Original array list: "+c4);
+	    ArrayList<String> newc1=(ArrayList<String>)c4.clone();
+	    System.out.println("Cloned array list: "+newc1);
+	    
+	    //remove all elements
+	   // System.out.println("Original array list: "+c4);
+	   // c4.removeAll(c4);
+	   // System.out.println("remove array list: "+c4);
+	    
+	    //list empty or not
+	    System.out.println("c4 is empty "+c4.isEmpty());
+	    System.out.println("c1 is empty "+c1.isEmpty()); 
+	    
+	    //trim capacity of array
+	    System.out.println("Original array list: "+c4);
+	    c4.trimToSize();
+	    System.out.println("trim array list: "+c4);
+	    
+	    //increase size of array
+	    ArrayList<String> c5=new ArrayList<String>(3);
+	    c5.add("Red");c5.add("Green");c5.add("Black");
+	    System.out.println("aray list: "+c5);
+	    c5.ensureCapacity(5);
+	    c5.add("White");c5.add("Pink");
+	    System.out.println("aray list: "+c5);
+	    
+	    //replace second element of a ArrayList wit specified element
+	    ArrayList<String> c6=new ArrayList<String>();
+	    c6.add("Red");c6.add("Green");c6.add("Black");
+	    c6.set(2,"blue");
+	    System.out.println("aray list: "+c6);
+	    
+	    //
+	    int no_of_elements=c1.size();
+	    for(int index=0;index<no_of_elements;index++)
+	    System.out.println(c1.get(index));
+	}
+}
