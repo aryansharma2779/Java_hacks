@@ -1,0 +1,43 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		LinkedList<String> l_list=new LinkedList<String>();
+		l_list.add("Red");
+		l_list.add("black");
+		l_list.add("Blue");
+		l_list.add("Green");
+		l_list.add("Pink");
+		l_list.add("Yellow");
+		System.out.println(l_list);
+		
+		//iteration through the LinkedList
+		for(String element:l_list){
+		    System.out.print(element+" ");
+		}
+		System.out.println();
+		//iterate form specific element
+		Iterator p=l_list.listIterator(3);
+		while(p.hasNext()){
+		    System.out.println(p.next());
+		}
+		Iterator it=l_list.descendingIterator();
+		while(it.hasNext())
+		System.out.print(it.next()+" ");
+		System.out.println();
+		
+		//add element in link list
+		l_list.add(2,"Grey");
+		System.out.print(l_list);
+		
+		
+	}
+}
