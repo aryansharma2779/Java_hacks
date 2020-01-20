@@ -36,8 +36,26 @@ public class Main
 		
 		//add element in link list
 		l_list.add(2,"Grey");
-		System.out.print(l_list);
+		System.out.println(l_list);
 		
-		
-	}
+		//add first and add at last
+        l_list.addFirst("maroon");
+        l_list.addLast("gold");
+        
+        System.out.println(l_list);
+		//add at first
+        l_list.offerFirst("silver");
+        System.out.println(l_list);
+        //add at last
+        l_list.offerLast("mustard");
+        System.out.println(l_list);
+        
+        
+        //insert at specific index
+        LinkedList<String> l_list1=new LinkedList<String>();                
+        l_list1.add("topaz");
+        l_list1.add("lightBlue");
+        l_list.addAll(1,l_list1);
+        System.out.println(l_list);
+        	}
 }
