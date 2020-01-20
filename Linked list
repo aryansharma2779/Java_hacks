@@ -57,5 +57,22 @@ public class Main
         l_list1.add("lightBlue");
         l_list.addAll(1,l_list1);
         System.out.println(l_list);
-        	}
+        
+        //WAP to get first and last occurance of specified element
+        System.out.println(l_list.getFirst());
+        System.out.println(l_list.getLast());
+        
+        //print positions
+        for(int i=0;i<l_list.size();i++){
+            System.out.println("Element at position "+i+" is "+l_list.get(i));
+        }
+        //remove at particular index
+        l_list.remove(2);
+        System.out.println(l_list);
+        
+        //remove first and last element of link list
+        System.out.println("remove first "+l_list.removeFirst());
+        System.out.println("remove last "+l_list.removeLast());
+        
+                	}
 }
