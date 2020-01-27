@@ -89,5 +89,54 @@ public class Main
         //join 2 link list
         l_list.addAll(l_list1);
         System.out.println(l_list);
+        
+        LinkedList<String> c1=new LinkedList<String>();
+        c1.add("Red");
+        c1.add("Blue");
+        c1.add("Black");
+        c1.add("Pink");
+        c1.add("white");
+        LinkedList<String> c2=new LinkedList<String>();
+        c2=(LinkedList)c1.clone();
+        System.out.println(c2);
+        
+        //peekFirst
+        String x=c1.peekFirst();
+        System.out.println("peek First "+x);
+        
+        //leafnode or last element retrieve but doenot remove
+        x=c1.peekLast();
+        System.out.println("Peek Last "+x);
+        
+        //element exist in link list or not
+        if(c1.contains("Blue")){
+            System.out.println("Color is present in linked list");
+        }
+        else{
+            System.out.println("Color is not present in linked list");
+        }
+        
+        //convertin linked list to array list
+        List<String> list=new ArrayList<String>(c1);
+        for(String str:list){
+            System.out.print(str);
+        }
+        System.out.println();
+        //compare 2 link list /element to element comparison
+        LinkedList<String> c3=new LinkedList<String>();
+        for (String e:c1){
+            c3.add(c2.contains(e)?"Yes":"No");}
+        System.out.println(c3);
+        
+        //LinkedList list is empty or not
+        System.out.println(c1.isEmpty());
+        c1.removeAll(c1);
+        System.out.println(c1.isEmpty());
+        
+        //replacin elements wit new value
+        c2.set(1,"SkyBlue");
+        System.out.println(c2);
+        
+        
                 	}
 }
